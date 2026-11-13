@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9주차 실습</title>
+<style>
+p { color: blue; }
+.highlight { background-color: yellow; }
+#header { font-size: 24px; }
+h1, h2, h3 { color: navy; }
+.box {
+width: 300px;
+padding: 20px;
+border: 1px solid black;
+margin: 10px;
+}
+.flex-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 50px;
+background-color: lightgray;
+}
+.flex-item {
+display: flex;
+background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<h1>My First Page</h1>
+<p>This is a paragraph with a <a href="https://github.com/seohan907">link</a>.</p>
+<img src="https://github.com/seohan907.png" alt="Sample Image" width="150">
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+<p id="header">ID 선택자로 글자를 키운 문단</p>
+<p class="highlight">클래스 선택자로 노란 배경을 넣은 문단</p>
+<div class="box">This is a BOX Model</div>
+<div class="flex-container">
+<div class="flex-item">1</div>
+<div class="flex-item">2</div>
+<div class="flex-item">3</div>
+</div>
+<button id='myButton'>버튼</button>
+<div id='myParagraph'>안녕하세요~</div>
+<script>
+let name = "John";
+if (name === "John") {
+console.log("Hello, John!");
+} else {
+console.log("Hello, stranger!");
+}
+function greet(person) {
+return `Hello, ${person}!`;
+}
+console.log(greet("Alice"));
+
+document.addEventListener("DOMContentLoaded", function() {
+const button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+const paragraph = document.getElementById("myParagraph");
+paragraph.style.color = "red";
+paragraph.textContent = "You clicked the button!";
+});
+});
+</script>
+</body>
+</html>
